@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html>
+<title>Steven Baeringer's Site</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+	background: #000;
+	background-image: url("images/bg.jpg");
+}
+
+.w3-sidebar {width: 140px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (180px) */
+#main {margin-left:180px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+.w3-grad-diag1 {
+  background: w3-ctheme; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right top,rgba(64,42,33,0),rgba(0,0,0,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(bottom left,rgba(64,42,33,0),rgba(0,0,0,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(bottom left,rgba(64,42,33,0),rgba(0,0,0,1)); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom left, rgba(64,42,33,0), rgba(0,0,0,1)); /*Standard*/
+}
+.w3-grad-diag2 {
+  background: w3-ctheme; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top,rgba(64,42,33,0),rgba(0,0,0,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(bottom right,rgba(64,42,33,0),rgba(0,0,0,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(bottom right,rgba(64,42,33,0),rgba(0,0,0,1)); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom right, rgba(64,42,33,0), rgba(0,0,0,1)); /*Standard*/
+}
+.w3-grad-linear {
+  background: w3-theme-l3; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,rgba(0,0,0,1),rgba(0,0,0,0),rgba(0,0,0,1)); /* Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right,rgba(0,0,0,1),rgba(0,0,0,0),rgba(0,0,0,1)); /* For Opera 11.6 to 12.0 */
+  background: -moz-linear-gradient(right,rgba(0,0,0,1),rgba(0,0,0,0),rgba(0,0,0,1)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,0),rgba(0,0,0,1)); /* Standard syntax */
+}
+
+h1,h2,h3,p,li,ul {color: white},h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+.w3-theme-l5 {color:#000 !important; background-color:#f6fbfb !important}
+.w3-theme-l4 {color:#000 !important; background-color:#e2f2f2 !important}
+.w3-theme-l3 {color:#000 !important; background-color:#c4e6e6 !important}
+.w3-theme-l2 {color:#000 !important; background-color:#a7d9d9 !important}
+.w3-theme-l1 {color:#000 !important; background-color:#8acdcd !important}
+.w3-theme-d1 {color:#fff !important; background-color:#58b7b7 !important}
+.w3-theme-d2 {color:#fff !important; background-color:#48a9a9 !important}
+.w3-theme-d3 {color:#fff !important; background-color:#3f9393 !important}
+.w3-theme-d4 {color:#fff !important; background-color:#367e7e !important}
+.w3-theme-d5 {color:#fff !important; background-color:#2d6969 !important}
+
+.w3-theme-light {color:#000 !important; background-color:#f6fbfb !important}
+.w3-theme-dark {color:#fff !important; background-color:#2d6969 !important}
+.w3-theme-action {color:#fff !important; background-color:#2d6969 !important}
+
+.w3-theme {color:#000 !important; background-color:#6dc0c0 !important}
+.w3-text-theme {color:#6dc0c0 !important}
+.w3-border-theme {border-color:#6dc0c0 !important}
+
+.w3-hover-theme:hover {color:#000 !important; background-color:#6dc0c0 !important}
+.w3-hover-text-theme {color:#6dc0c0 !important}
+.w3-hover-border-theme:hover {border-color:#6dc0c0 !important}
+
+.w3-theme-bl5 {color:#000 !important; background-color:#f7fbfe !important}
+.w3-theme-bl4 {color:#000 !important; background-color:#e4f2fb !important}
+.w3-theme-bl3 {color:#000 !important; background-color:#c8e5f6 !important}
+.w3-theme-bl2 {color:#000 !important; background-color:#add8f2 !important}
+.w3-theme-bl1 {color:#000 !important; background-color:#92cbee !important}
+.w3-theme-bd1 {color:#fff !important; background-color:#58afe5 !important}
+.w3-theme-bd2 {color:#fff !important; background-color:#39a0e0 !important}
+.w3-theme-bd3 {color:#fff !important; background-color:#2190d5 !important}
+.w3-theme-bd4 {color:#fff !important; background-color:#1d7cb7 !important}
+.w3-theme-bd5 {color:#fff !important; background-color:#186798 !important}
+
+.w3-theme-blight {color:#000 !important; background-color:#f7fbfe !important}
+.w3-theme-bdark {color:#fff !important; background-color:#186798 !important}
+.w3-theme-baction {color:#fff !important; background-color:#186798 !important}
+
+.w3-btheme {color:#000 !important; background-color:#77beea !important}
+.w3-text-btheme {color:#77beea !important}
+.w3-border-btheme {border-color:#77beea !important}
+
+.w3-hover-btheme:hover {color:#000 !important; background-color:#77beea !important}
+.w3-hover-text-btheme {color:#77beea !important}
+.w3-hover-border-btheme:hover {border-color:#77beea !important}
+
+.w3-theme-cl5 {color:#000 !important; background-color:#f7f1ef !important}
+.w3-theme-cl4 {color:#000 !important; background-color:#e3d0c8 !important}
+.w3-theme-cl3 {color:#000 !important; background-color:#c7a192 !important}
+.w3-theme-cl2 {color:#fff !important; background-color:#ab725b !important}
+.w3-theme-cl1 {color:#fff !important; background-color:#764d3d !important}
+.w3-theme-cd1 {color:#fff !important; background-color:#3a261e !important}
+.w3-theme-cd2 {color:#fff !important; background-color:#33211a !important}
+.w3-theme-cd3 {color:#fff !important; background-color:#2d1d17 !important}
+.w3-theme-cd4 {color:#fff !important; background-color:#261914 !important}
+.w3-theme-cd5 {color:#fff !important; background-color:#201510 !important}
+
+.w3-theme-clight {color:#000 !important; background-color:#f7f1ef !important}
+.w3-theme-cdark {color:#fff !important; background-color:#201510 !important}
+.w3-theme-caction {color:#fff !important; background-color:#201510 !important}
+
+.w3-ctheme {color:#fff !important; background-color:#402a21 !important}
+.w3-text-ctheme {color:#402a21 !important}
+.w3-border-ctheme {border-color:#402a21 !important}
+
+.w3-hover-ctheme:hover {color:#fff !important; background-color:#402a21 !important}
+.w3-hover-text-ctheme {color:#402a21 !important}
+.w3-hover-border-ctheme:hover {border-color:#402a21 !important}
+</style>
+<body class="w3-content" style="max-width:1600px;">
+
+<!-- Sidebar/menu -->
+<nav class="w3-grad-diag2 w3-sidebar w3-collapse" style="z-index:2;" id="mySidebar"><br>
+    <button class="w3-button w3-hide-large w3-bar-item" onclick="w3_close()" title="close menu"><i class="fa fa-remove"></i></button>
+	<div class="w3-bar-block">
+		<br></br>
+		<p></p>
+		<div>
+			<a onclick="openTab('solo projects')" onclick="w3_close()" class="w3-bar-item w3-theme-l4 w3-text-white w3-button w3-padding"><i class="fa fa-male fa-fw w3-margin-right"></i>Solo Projects</a> 
+		</div>
+		<p></p>
+		<div>
+			<a onclick="openTab('team experience')" onclick="w3_close()" class="w3-third w3-bar-item w3-theme-l3 w3-text-white w3-button w3-padding w3-margin-top"><i class="fa fa-mortar-board fa-fw w3-margin-right"></i>Team Experience</a> 
+		</div>
+		<p></p>
+		<div>
+			<a onclick="openTab('about')" onclick="w3_close()" class="w3-bar-item w3-theme-l1 w3-button w3-padding w3-margin-top"><i class="fa fa-user fa-fw w3-margin-right"></i>About</a> 
+		</div>
+		<p></p>
+		<div>
+			<a onclick="openTab('contact')" onclick="w3_close()" class="w3-bar-item w3-btheme w3-button w3-padding w3-margin-top"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Contact</a>
+		</div>
+		<br></br>
+	</div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="z-index:1;cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div id="main" class="w3-main">
+
+  <!-- Header ----------------------------------------------------------------------------------------------------------------------------->
+	<header id="header" class="w3-clear w3-top w3-opacity w3-hover-opacity-off">
+		<span class="w3-button w3-right w3-ctheme w3-hide-large w3-xlarge" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+	</header>
+	
+	<div class="w3-container">
+		<div class="w3-half">
+			<img src="images/LogoSbaero.png" alt="logo" style="margin: 65px 0px 0px 0px; width:80%; max-height:500px; max-width:700px;"></img>
+			<h2 style="margin: 0px 0px 30px 20px;">Steven Baeringer - Technical Designer</h2>
+		</div>
+
+		<div class="w3-half" style="margin: 70px 0px 0px 0px">
+			<!--<div class="w3-half">
+				<h3 style="margin: 0px 0px 0px 0px">2018 Solo Project</h3>
+				<iframe style="border:3px solid white; margin: 0px 0px 0px 0px; max-height:315px; max-width:560px;" src="https://www.youtube.com/embed/ulloH52CXPc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>-->
+			<!--<div class="">
+				<h3 style="margin: 0px 0px 0px 0px">2017 Demo Reel</h3>
+				<iframe style="border:3px solid white; margin: 0px 0px 0px 0px; max-height:315px; max-width:560px;" src="https://www.youtube.com/embed/WHfuEXYzdk0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>-->
+		</div>
+	</div>
+
+<!-- Solo Projects ------------------------------------------------------------------------------------------------------------------------------------->
+	<div id="solo projects" class="tab">
+		<div class="w3-theme-l4">
+			<h3 class="w3-center w3-text-black" style="padding: 0px 0px 4px 0px;">Solo Projects</h3>
+		</div>
+		
+	<!-- Undisturbed Project Grid---------------------------------------------------------------------------------------------------------------------->
+		<div class="w3-container w3-grad-diag1" style="padding: 0px 0px 0px 0px; margin: 0px 0px 40px 0px;">
+			<div class="w3-twothird">
+								
+				<iframe id="video6" style="width:100%; min-height: 526px" class="w3-animate-opacity" src="https://www.youtube.com/embed/ulloH52CXPc?rel=0" frameborder="0" allowfullscreen></iframe>
+
+			</div> <!-- End carousel -->
+			
+			<div class="w3-third w3-padding">
+				<h3><b>Undisturbed</b> - Spring 2018</h3>
+				<p><b>7 weeks, part time</b> - <a href="https://docs.google.com/presentation/d/1W9hDfHSz4tmRvNcWJRoJFPLbFVYSdgw5uI-R4miSXyk/edit?usp=sharing" target="_blank" class="w3-text-yellow">Powerpoint Pitch</a> - <a href="pdf/Undisturbed_Concept_Doc.pdf" target="_blank" class="w3-text-green">High Concept</a></p>
+				<p>Experience the Hero’s journey from another perspective, as you deliver judgement upon trespassers of your lair.</p>
+				<p>Technical combat prototype, made with 3rd party models and animations, between a player controlled Wyvern and Warrior, including a standalone racquetball spinoff made in two days (with AI Warrior, Blueprint below).</p>
+				<!--<button onclick="myFunction('Accordion6')" class="w3-button w3-block-left w3-theme-l4 w3-card-2"><b>
+				Design</b></button>-->
+				<p></p>
+				<a href ="https://blueprintue.com/blueprint/05y7h7zu/" target="_blank" class="w3-text-pink">Warrior Blueprint</a>
+				<p></p>
+				<a href ="https://drive.google.com/open?id=1Y5UBRxd-0XUHI61TDqSHKfiSgLf7zYaP" target="_blank" class="w3-text-green">Undisturbed: Racquetball EXE Google Drive</a>
+			</div>
+			
+			<div class="w3-bar">
+			</div>
+			
+			<div class="w3-third w3-padding-large">
+				<button onclick="myFunction('Accordion7')" class="w3-bar w3-button w3-block-left w3-theme-l4 w3-card-2"><b>Wyvern</b></button>
+				<div id="Accordion7" class="w3-hide">
+					<p><b><font color="aqua">Aesthetic</font></b> - Should feel slower but able to catch the opponent off guard with well timed/positioned powerful attacks and abilities.</p>
+					<p><b><font color="aqua">Dynamics</font></b> - A player that is too passive will be attacked more by small and noncommittal attacks and might run out of health. A player that is too aggressive might run out of stamina and might run out of health before it regenerates. Light attacks are not committed, but heavy attacks can be used to catch the opponent off guard.</p>
+					<p><b><font color="aqua">Mechanics</font></b> - Attacks should cover specific zones and ranges around the boss, including well conveyed, large area attacks, such that a player boss can choose the best option for attack (meaningful choice) based on their relative location to the Warrior.</p>
+					<p> - A problem I encountered here was that the animation pack for the Wyvern did not have rotating, stomping, or sweeping animations for attacks.</p>
+					<p> - To address this I will be looking for a better suited animation pack, I've made animation composites of parts of animations to create the anticipation of attacks, and I've used a Character Rotation Blueprint node to implement a sweeping/turn around attack.</p>
+					<p> - Special attacks like "Turn Around", "Glide", "Flame Breath" (planned), "Gust" (planned), and "Dive Bomb" (planned) should allow for a robust choice of moves beyone light and heavy attacks.</p>
+				</div>
+			</div>
+			<div class="w3-third w3-padding-large">
+				<button onclick="myFunction('Accordion8')" class="w3-bar w3-button w3-block-left w3-theme-l3 w3-card-2"><b>Warrior</b></button>
+				<div id="Accordion8" class="w3-hide">
+					<p><b><font color="aqua">Aesthetic</font></b> - Should feel fast and skillful but fragile.</p>
+					<p><b><font color="aqua">Dynamics</font></b> - A player that is too passive will not be in position to punish a Strong/Special attack by the boss and might run out of health. A player that is too aggressive might run out of stamina and might run out of health or heal ability before it regenerates. Light attacks are not committed but inefficient, while heavy attacks can be used to maximize damage potential and stagger the boss (planned).</p>
+					<p><b><font color="aqua">Mechanics</font></b> - Attacks should have damage that reflect the length of the animation and input required.</p>
+					<p>The Warrior must attack as much as possible while dodging and managing stamina to escape the strong Boss attacks.</p>
+					<p> - To give the player the choice of damage potential vs safety, I've implemented two weapons, a Sword that is fast but weak, and an Axe that is slow but strong.</p>
+					<p> - To give the player the ability to feel fast and skillful, I've implemented an Input Buffer and Directional Dodge.</p>
+					<p> - To make the player feel fragile, I've given them low health but a fixed number of healing items to use if they are skillful enough to escape further damage.</p>
+				</div>
+			</div>
+			<div class="w3-third w3-padding-large">
+				<button onclick="myFunction('Thoughts6')" class="w3-bar w3-button w3-block-right w3-theme-l1 w3-card-2"><b>
+				Implementation</b></button>
+				<div id="Thoughts6" class="w3-hide">
+					<p><b>Features with <font color="yellow">*</font> are coded either without guides or above and beyond their implementation.</b></p>
+					<p>Animation Montage based combat system that blends between the normal locomotion animation, using Animation Notifies to toggle states, launch the player, and call functions in Blueprint.</p>
+					<p><font color="yellow">*</font> Input Buffer System that allows the designer to choose which abilities (inputs) are allowed to automatically activate after each type of move is almost complete.</p>
+					<p> - This allows the player to efficiently attack, dodge, heal, or switch weapons without having to spam the input when it becomes available.</p>
+					<p>Lock On system using a Blueprint Interface to recieve and send lockable target position vectors and interpolating the Player Camera to look at that position on all axis and Control Rotation on the yaw axis.</p>
+					<p><font color="yellow">*</font> Directional Dodge that, with no input, dodges backwards, but will dodge in a direction calculated with the Anim Instance, Velocity, and Control Rotation if movement input is true.</p>
+					<p>Combo System which plays different attack Anim Montages if the same type of attack input is pressed before the combo is reset at the end of an Anim Montage.</p>
+					<p><font color="yellow">*</font> Light Attacks - Slowed movement and rotation windows during the startup or in between attacks to adjust to a moving target.</p>
+					<p><font color="yellow">*</font> Heavy Attacks - Stopped movement and slowed animation while button is held, until either the button is released or an Anim Notify in the Montage is reached, allowing for a slow or really slow wind up to throw off opponents and do massive damage. (currently damage scaling based on time held is planned but not implemented)</p>
+					<p><font color="yellow">*</font> Character specific abilities - Wyvern turn around and glide attacks (fire attack planned) | Warrior switch weapons and heal abilities.</p>
+					<p>Knockback and Stun (planned)</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Team Experience ------------------------------------------------------------------------------------------------------------------------------------->
+	<div id="team experience" class="tab" style="display:none;">
+		<div class="w3-theme-l3">
+			<h3 class="w3-center w3-text-black" style="padding: 0px 0px 4px 0px;">Team Experience</h3>
+		</div>
+		
+		<div class="w3-padding w3-center w3-container w3-grad-diag1" style="margin: 0px 0px 40px 0px;">
+			<h3 class="w3-padding" style="margin: 0px 0px 0px 0px">2017 Demo Reel</h3>
+			<iframe style="border:3px solid white; margin: 0px 0px 40px 0px; max-height:315px; max-width:560px;" src="https://www.youtube.com/embed/WHfuEXYzdk0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		
+	<!-- Awakening Project Grid---------------------------------------------------------------------------------------------------------------------->
+		<div class="w3-container w3-grad-diag1" style="padding: 0px 0px 0px 0px; margin: 0px 0px 40px 0px;">
+			<div class="w3-twothird">
+				<div id="slides4" class="s4">
+					<img class="mySlides4 w3-animate-opacity" src="images/project4-1.jpg" alt="Awakening" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(4);currentDiv(1)"></img>
+					<img class="mySlides4 w3-animate-opacity" src="images/project4-2.jpg" alt="Awakening" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(4);currentDiv(2)"></img>
+					<img class="mySlides4 w3-animate-opacity" src="images/project4-3.jpg" alt="Awakening" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(4);currentDiv(3)"></img>
+					<img class="mySlides4 w3-animate-opacity" src="images/project4-4.jpg" alt="Awakening" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(4);currentDiv(4)"></img>
+					<img class="mySlides4 w3-animate-opacity" src="images/project4-5.jpg" alt="Awakening" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(4);currentDiv(5)"></img>
+					<img class="mySlides4 w3-animate-opacity" src="images/project4-6.jpg" alt="Awakening" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(4);currentDiv(6)"></img>
+					<img class="mySlides4 w3-animate-opacity" src="images/project4-7.jpg" alt="Awakening" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(4);currentDiv(7)"></img>
+				</div>
+				
+				<iframe id="video4" style="width:100%; min-height: 526px" class="w3-animate-opacity" src="https://www.youtube.com/embed/xOhGBO5VXPI" frameborder="0" allowfullscreen></iframe>
+
+				<div id="myModal4" class="w3-modal w3-black">
+					<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal(4)" style="cursor:pointer">×</span>
+					<div class="w3-modal-content">
+
+						<div class="w3-display-container w3-black" style="max-width:1200px">
+							<img class="myModalSlides4" src="images/project4-1.jpg" style="width:100%">
+							<img class="myModalSlides4" src="images/project4-2.jpg" style="width:100%">
+							<img class="myModalSlides4" src="images/project4-3.jpg" style="width:100%">
+							<img class="myModalSlides4" src="images/project4-4.jpg" style="width:100%">
+							<img class="myModalSlides4" src="images/project4-5.jpg" style="width:100%">
+							<img class="myModalSlides4" src="images/project4-6.jpg" style="width:100%">
+							<img class="myModalSlides4" src="images/project4-7.jpg" style="width:100%">
+							<button class="w3-button w3-display-left w3-black w3-opacity" onclick="plusDivs(-1)">&#10094;</button>
+							<button class="w3-button w3-display-right w3-black w3-opacity" onclick="plusDivs(1)">&#10095;</button>
+							
+						</div> <!-- End w3-content -->
+						<div class="w3-row w3-black w3-center">
+							<div class="w3-display-container">
+								<p id="caption4"></p>
+							</div>
+							<div class="w3-col s4">
+								<img class="demo4 w3-opacity w3-hover-opacity-off" src="images/project4-1.jpg" style="width:100%" onclick="currentDiv(1)" alt="Splash Art">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo4 w3-opacity w3-hover-opacity-off" src="images/project4-2.jpg" style="width:100%" onclick="currentDiv(2)" alt="Landing Site">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo4 w3-opacity w3-hover-opacity-off" src="images/project4-3.jpg" style="width:100%" onclick="currentDiv(3)" alt="Howler Attacking - Alerted by Movement">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo4 w3-opacity w3-hover-opacity-off" src="images/project4-4.jpg" style="width:100%" onclick="currentDiv(4)" alt="Resource Highlighter - Highlighting Water in Enemy Drones and Tombs">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo4 w3-opacity w3-hover-opacity-off" src="images/project4-5.jpg" style="width:100%" onclick="currentDiv(5)" alt="Drone - Stunned by Blowtorch">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo4 w3-opacity w3-hover-opacity-off" src="images/project4-6.jpg" style="width:100%" onclick="currentDiv(6)" alt="Queen Encounter">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo4 w3-opacity w3-hover-opacity-off" src="images/project4-7.jpg" style="width:100%" onclick="currentDiv(7)" alt="Resource Highlighter, Queen, and Multiple Drones">
+							</div>
+						</div> <!-- End row -->
+					</div> <!-- End modal content -->
+				</div> <!-- End modal -->
+			</div> <!-- End carousel -->
+			
+			<div class="w3-third w3-padding">
+				<h3><b>Awakening</b> - Fall 2017</h3>
+				<p><b>Creative Director, Level Designer, Programmer</b> - <a href="pdf/Awakening_GDD.pdf" target="_blank" class="w3-text-green">Game Design Document</a> - <a href ="https://blueprintue.com/profile/sbaero/" target="_blank" class="w3-text-pink">Blueprints</a></p>
+				<p>First person survival horror game on Mars, made in Unreal Engine 4. Awaken after losing conciousness from a fall to discover a buried temple and a hostile native Martian population.</p>
+				<button onclick="myFunction('Accordion4')" class="w3-button w3-block-left w3-theme-l4 w3-card-2"><b>
+				Responsibilities</b></button>
+				<div id="Accordion4" class="w3-hide">
+					<p>Learn how to make a horror game by studying contemporary examples - <a href="pdf/Outlast_Horror_Game Design.pdf" target="_blank" class="w3-text-green">Outlast/Horror Game Design Study</a>.</p>
+					<p>Review tech and art leads’ submissions for compliance with game vision.</p>
+					<p>Level design, scripted events, sound, lighting, cutscenes, and collaboration on the Player Controller.</p>
+				</div>
+				<p></p>
+				<button onclick="myFunction('Thoughts4')" class="w3-button w3-block-right w3-theme-l1 w3-card-2"><b>
+				Thoughts</b></button>
+				<div id="Thoughts4" class="w3-hide">
+					<p>This was our team's first Unreal Engine 4 game, we lost time due to Hurricane Irma, we had trouble setting up source control, and nobody knew how to make a horror game, but we overcame these obstacles through communication and a research based work ethic.</p>
+					<p>The hardest part of development was filling in the gaps of roles and skills of our team. We did not have a sound designer, first person animator, or particle designer, but were able to learn those skills during the semester.</p>
+					<p>This project was an important experience in transferring skills between C# and Unity to Blueprint and UE4, applying horror game design concepts, and working in a larger team of 8 people with a diverse set of skills and schedules.</p>
+				</div>
+				<p></p>
+				<button class="w3-button w3-btheme w3-card-2" type="button" onclick="togglePic('slides4','video4')"><b>Toggle video</b></button>
+				<p></p>
+				<iframe frameborder="0" src="https://itch.io/embed/202442" width="208" height="167"></iframe>
+			</div>
+		</div>
+		
+	<!-- Star Struck Project Grid---------------------------------------------------------------------------------------------------------------------->
+		<div class="w3-container w3-grad-diag1" style="padding: 0px 0px 0px 0px; margin: 0px 0px 40px 0px;">
+			<div class="w3-twothird">
+				<div id="slides1" class="s4">
+					<img class="mySlides1 w3-animate-opacity" src="images/project1-1.jpg" alt="Star Struck" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(1);currentDiv(1)"></img>
+					<img class="mySlides1 w3-animate-opacity" src="images/project1-2.jpg" alt="Star Struck" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(1);currentDiv(2)"></img>
+					<img class="mySlides1 w3-animate-opacity" src="images/project1-3.jpg" alt="Star Struck" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(1);currentDiv(3)"></img>
+					<img class="mySlides1 w3-animate-opacity" src="images/project1-4.jpg" alt="Star Struck" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(1);currentDiv(4)"></img>
+					<img class="mySlides1 w3-animate-opacity" src="images/project1-5.jpg" alt="Star Struck" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(1);currentDiv(5)"></img>
+					<img class="mySlides1 w3-animate-opacity" src="images/project1-6.jpg" alt="Star Struck" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(1);currentDiv(6)"></img>
+					<img class="mySlides1 w3-animate-opacity" src="images/project1-7.jpg" alt="Star Struck" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(1);currentDiv(7)"></img>
+				</div>
+				
+				<iframe id="video1" style="width:100%; min-height: 526px" class="w3-animate-opacity" src="https://www.youtube.com/embed/Ue2EP3AhoUw" frameborder="0" allowfullscreen></iframe>
+
+				<div id="myModal1" class="w3-modal w3-black">
+					<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal(1)" style="cursor:pointer">×</span>
+					<div class="w3-modal-content">
+
+						<div class="w3-display-container w3-black" style="max-width:1200px">
+							<img class="myModalSlides1" src="images/project1-1.jpg" style="width:100%">
+							<img class="myModalSlides1" src="images/project1-2.jpg" style="width:100%">
+							<img class="myModalSlides1" src="images/project1-3.jpg" style="width:100%">
+							<img class="myModalSlides1" src="images/project1-4.jpg" style="width:100%">
+							<img class="myModalSlides1" src="images/project1-5.jpg" style="width:100%">
+							<img class="myModalSlides1" src="images/project1-6.jpg" style="width:100%">
+							<img class="myModalSlides1" src="images/project1-7.jpg" style="width:100%">
+							<button class="w3-button w3-display-left w3-black w3-opacity" onclick="plusDivs(-1)">&#10094;</button>
+							<button class="w3-button w3-display-right w3-black w3-opacity" onclick="plusDivs(1)">&#10095;</button>
+							
+						</div> <!-- End w3-content -->
+						<div class="w3-row w3-black w3-center">
+							<div class="w3-display-container">
+								<p id="caption1"></p>
+							</div>
+							<div class="w3-col s4">
+								<img class="demo1 w3-opacity w3-hover-opacity-off" src="images/project1-1.jpg" style="width:100%" onclick="currentDiv(1)" alt="Splash Art">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo1 w3-opacity w3-hover-opacity-off" src="images/project1-2.jpg" style="width:100%" onclick="currentDiv(2)" alt="Main Menu">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo1 w3-opacity w3-hover-opacity-off" src="images/project1-3.jpg" style="width:100%" onclick="currentDiv(3)" alt="Early Game">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo1 w3-opacity w3-hover-opacity-off" src="images/project1-4.jpg" style="width:100%" onclick="currentDiv(4)" alt="Rogue Star (left) and Mercury (ahead)">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo1 w3-opacity w3-hover-opacity-off" src="images/project1-5.jpg" style="width:100%" onclick="currentDiv(5)" alt="Obliterating a Planet">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo1 w3-opacity w3-hover-opacity-off" src="images/project1-6.jpg" style="width:100%" onclick="currentDiv(6)" alt="Not Big Enough - Lose State">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo1 w3-opacity w3-hover-opacity-off" src="images/project1-7.jpg" style="width:100%" onclick="currentDiv(7)" alt="Online Leaderboard!">
+							</div>
+						</div> <!-- End row -->
+					</div> <!-- End modal content -->
+				</div> <!-- End modal -->
+			</div> <!-- End carousel -->
+			
+			<div class="w3-third w3-padding">
+				<h3><b>Star Struck</b> - Summer 2017</h3>
+				<p><b>Tech Lead - </b><a href ="https://play.google.com/store/apps/details?id=com.MeteorMen.StarStruck&hl=en" target="_blank" class="w3-text-green">Google Play - Updtd 1/18</a> - <a href ="https://github.com/WizzKid/StarStruck" target="_blank" class="w3-text-pink">Github</a></p>
+				<p>A 3D, third person infinite runner made in Unity. Play as a meteor as you travel from one galaxy to the next, destroying asteroids, planets, and stars to gain mass.</p>
+				<!--<p>This game was developed over thirteen weeks as a university class project with a team of seven people who were relatively new to game production.</p>-->
+				<button onclick="myFunction('Accordion1')" class="w3-button w3-block-left w3-theme-l4 w3-card-2"><b>
+				Responsibilities</b></button>
+				<div id="Accordion1" class="w3-hide">
+					<p>Infinitely generating tile system, player controls, collision events, all programming for power ups and hazards except for zombie star, as well as a majority of balancing,</p>
+					<p>Mass system, speed boost mechanic, cleaned up screen fade - main menu - UI - and player mesh code,</p>
+					<p>Sound controls for options menu, controller input setup and mobile porting.</p>
+				</div>
+				<p></p>
+				<button onclick="myFunction('Thoughts1')" class="w3-button w3-block-right w3-theme-l1 w3-card-2"><b>
+				Thoughts</b></button>
+				<div id="Thoughts1" class="w3-hide">
+					<p>Early in development, I had tried to make the entire scene scale accurately using multiple formulas for sizes of asteroids, planets, tiles, speed, and the player, but decided to fake it with having the player stay in one place and have the tiles come towards them while only scaling planets/targets.</p>
+					<p>This new method allowed for better stability and more free time to incorporate more advanced mechanics.</p>
+					<p>The hardest part of delevopment was doing most of the work for gameplay myself. With a team of five artists, a producer who could program, and one programmer, it seemed that I had a hand in everything.</p>
+					<p>This project was a good experience in scaling exponential functions of speed, scale, and difficulty, and using controller and mobile input in Unity.</p>
+				</div>
+				<p></p>
+				<button class="w3-button w3-btheme w3-card-2" type="button" onclick="togglePic('slides1','video1')"><b>Toggle video</b></button>
+				<p></p>
+				<iframe frameborder="0" src="https://itch.io/embed/162947?linkback=true&amp;bg_color=020212&amp;fg_color=ffffff&amp;link_color=c130ca&amp;border_color=343444" width="208" height="167"></iframe>
+			</div>
+		</div>
+		
+<!-- Final Contingency Project Grid--------------------------------------------------------------------------------------------------------------------->
+<!--		<div class="w3-container w3-ctheme w3-grad-diag1" style="padding: 0px 0px 0px 0px; margin: 0px 0px 40px 0px;">
+			<div class="w3-twothird">
+				<div id="slides2" class="s4">
+					<img class="mySlides2 w3-animate-opacity" src="images/project2-1.jpg" alt="Final Contingency" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(2);currentDiv(1)"></img>
+					<img class="mySlides2 w3-animate-opacity" src="images/project2-2.jpg" alt="Final Contingency" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(2);currentDiv(2)"></img>
+					<img class="mySlides2 w3-animate-opacity" src="images/project2-3.jpg" alt="Final Contingency" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(2);currentDiv(3)"></img>
+					<img class="mySlides2 w3-animate-opacity" src="images/project2-4.jpg" alt="Final Contingency" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(2);currentDiv(4)"></img>
+					<img class="mySlides2 w3-animate-opacity" src="images/project2-5.jpg" alt="Final Contingency" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(2);currentDiv(5)"></img>
+					<img class="mySlides2 w3-animate-opacity" src="images/project2-6.jpg" alt="Final Contingency" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(2);currentDiv(6)"></img>
+					<img class="mySlides2 w3-animate-opacity" src="images/project2-7.jpg" alt="Final Contingency" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(2);currentDiv(7)"></img>
+				</div>
+				
+				<iframe id="video2" style="width:100%; min-height: 526px" class="w3-animate-opacity" src="https://www.youtube.com/embed/NR2L0V2xkTg" frameborder="0" allowfullscreen></iframe>
+
+				<div id="myModal2" class="w3-modal w3-black">
+					<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal(2)" style="cursor:pointer">×</span>
+					<div class="w3-modal-content">
+
+						<div class="w3-display-container w3-black" style="max-width:1200px">
+							<img class="myModalSlides2" src="images/project2-1.jpg" style="width:100%">
+							<img class="myModalSlides2" src="images/project2-2.jpg" style="width:100%">
+							<img class="myModalSlides2" src="images/project2-3.jpg" style="width:100%">
+							<img class="myModalSlides2" src="images/project2-4.jpg" style="width:100%">
+							<img class="myModalSlides2" src="images/project2-5.jpg" style="width:100%">
+							<img class="myModalSlides2" src="images/project2-6.jpg" style="width:100%">
+							<img class="myModalSlides2" src="images/project2-7.jpg" style="width:100%">
+							<button class="w3-button w3-display-left w3-black w3-opacity" onclick="plusDivs(-1)">&#10094;</button>
+							<button class="w3-button w3-display-right w3-black w3-opacity" onclick="plusDivs(1)">&#10095;</button>
+						</div> <!-- End w3-content -->
+<!--						<div class="w3-row w3-black w3-center">
+							<div class="w3-display-container">
+								<p id="caption2"></p>
+							</div>
+							<div class="w3-col s4">
+								<img class="demo2 w3-opacity w3-hover-opacity-off" src="images/project2-1.jpg" style="width:100%" onclick="currentDiv(1)" alt="Splash Art">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo2 w3-opacity w3-hover-opacity-off" src="images/project2-2.jpg" style="width:100%" onclick="currentDiv(2)" alt="Main Menu">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo2 w3-opacity w3-hover-opacity-off" src="images/project2-3.jpg" style="width:100%" onclick="currentDiv(3)" alt="Enemy Colossus">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo2 w3-opacity w3-hover-opacity-off" src="images/project2-4.jpg" style="width:100%" onclick="currentDiv(4)" alt="Flying and Repairing Damaged Guardian">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo2 w3-opacity w3-hover-opacity-off" src="images/project2-5.jpg" style="width:100%" onclick="currentDiv(5)" alt="Zapping an Alien Leech">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo2 w3-opacity w3-hover-opacity-off" src="images/project2-6.jpg" style="width:100%" onclick="currentDiv(6)" alt="Arial View of Battle">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo2 w3-opacity w3-hover-opacity-off" src="images/project2-7.jpg" style="width:100%" onclick="currentDiv(7)" alt="Giant Fighting Robots!">
+							</div>
+						</div> <!-- End row -->
+<!--					</div> <!-- End modal content -->
+<!--				</div> <!-- End modal -->
+<!--			</div> <!-- End carousel -->
+		
+<!--			<div class="w3-third w3-padding">
+				<h3><b>Final Contingency</b> - Spring 2017</h3>
+				<p><b>Creative Director, Lead programmer, Particle Designer, Flexible</b> - <a href="https://github.com/WizzKid/FinalContingency" target="_blank" class="w3-text-pink"> GitHub</a></p>
+				<p>An objective based 3D third person action platformer with giant robots, lasers, a jetpack, magnet boots, leeches, and the weight of humanity on your shoulders, made in Unity.</p>
+				<!--<p>This game was developed over eight weeks as a university class project with a team of six people who were relatively new to game production.</p>-->
+<!--				<button onclick="myFunction('Accordion2')" class="w3-button w3-block-left w3-theme-l4 w3-card-2"><b>
+				Responsibilities</b></button>
+				<div id="Accordion2" class="w3-hide">
+					<p>The game controller which choreographed the fight between the Colossus and Guardian, the Colossus and Guardian health + visual representation, and win and loss states</p>
+					<p>All particles, the jetpack + UI, player health + UI back-end, player fall damage,</p>
+					<p>Small enemy navigation, all delays, and most colliders.</p>
+				</div>
+				<p></p>
+				<button onclick="myFunction('Thoughts2')" class="w3-button w3-block-right w3-theme-l1 w3-card-2"><b>
+				Thoughts</b></button>
+				<div id="Thoughts2" class="w3-hide">
+					<p>In coming up with the idea for the game, I wanted to do something different from peers and the industry in general that would also allow for the most growth from research based development.</p>
+					<p>Final Contingency has lots of mechanics, particles, animations, and state conveyances that needed to be present for the game to even function, as opposed to 2D platformers or exploration based games.</p>
+					<p>The hardest part of delevopment was fixing bugs created from integrating code between three programmers, an animator, and a UI guy, as well as problems with Unity Collaborate, and some really technical gravity changing scripts.</p>
+					<p>Working in an environment like this pushed us to set up guidelines on how to properly execute our production pipeline, integrate seamlessly, and meet deadlines without design compromises.</p>
+				</div>
+				<p></p>
+				<button class="w3-button w3-btheme w3-card-2" type="button" onclick="togglePic('slides2','video2')"><b>Toggle video</b></button>
+				<p></p>
+				<iframe frameborder="0" src="https://itch.io/embed/166881?linkback=true&amp;bg_color=000000&amp;fg_color=ffffff&amp;link_color=9032ae&amp;border_color=463f3c" width="208" height="167"></iframe>
+			</div>
+		</div>
+	  
+	<!-- SlamNJam Project Grid------------------------------------------------------------------------------------->
+<!--		<div class="w3-container w3-ctheme w3-grad-diag1" style="padding: 0px 0px 0px 0px; margin: 0px 0px 40px 0px;">		
+			<div class="w3-twothird">
+				<div id="slides3" class="s4">
+					<img class="mySlides3 w3-animate-opacity" src="images/project3-1.jpg" alt="Slam N Jam" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(3);currentDiv(1)"></img>
+					<img class="mySlides3 w3-animate-opacity" src="images/project3-2.jpg" alt="Slam N Jam" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(3);currentDiv(2)"></img>
+					<img class="mySlides3 w3-animate-opacity" src="images/project3-3.jpg" alt="Slam N Jam" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(3);currentDiv(3)"></img>
+					<img class="mySlides3 w3-animate-opacity" src="images/project3-4.jpg" alt="Slam N Jam" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(3);currentDiv(4)"></img>
+					<img class="mySlides3 w3-animate-opacity" src="images/project3-5.jpg" alt="Slam N Jam" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(3);currentDiv(5)"></img>
+					<img class="mySlides3 w3-animate-opacity" src="images/project3-6.jpg" alt="Slam N Jam" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(3);currentDiv(6)"></img>
+					<img class="mySlides3 w3-animate-opacity" src="images/project3-7.jpg" alt="Slam N Jam" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(3);currentDiv(7)"></img>
+				</div>
+				
+				<iframe id="video3" style="width:100%; min-height: 526px" class="w3-animate-opacity" src="https://www.youtube.com/embed/tn8Q4_oVGno" frameborder="0" allowfullscreen></iframe>
+
+				<div id="myModal3" class="w3-modal w3-black">
+					<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal(3)" style="cursor:pointer">×</span>
+					<div class="w3-modal-content">
+
+						<div class="w3-display-container w3-black" style="max-width:1200px">
+							<img class="myModalSlides3" src="images/project3-1.jpg" style="width:100%">
+							<img class="myModalSlides3" src="images/project3-2.jpg" style="width:100%">
+							<img class="myModalSlides3" src="images/project3-3.jpg" style="width:100%">
+							<img class="myModalSlides3" src="images/project3-4.jpg" style="width:100%">
+							<img class="myModalSlides3" src="images/project3-5.jpg" style="width:100%">
+							<img class="myModalSlides3" src="images/project3-6.jpg" style="width:100%">
+							<img class="myModalSlides3" src="images/project3-7.jpg" style="width:100%">
+							<button class="w3-button w3-display-left w3-black w3-opacity" onclick="plusDivs(-1)">&#10094;</button>
+							<button class="w3-button w3-display-right w3-black w3-opacity" onclick="plusDivs(1)">&#10095;</button>
+						</div> <!-- End w3-content -->
+<!--						<div class="w3-row w3-black w3-center">
+							<div class="w3-display-container">
+								<p id="caption3"></p>
+							</div>
+							<div class="w3-col s4">
+								<img class="demo3 w3-opacity w3-hover-opacity-off" src="images/project3-1.jpg" style="width:100%" onclick="currentDiv(1)" alt="Test Area">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo3 w3-opacity w3-hover-opacity-off" src="images/project3-2.jpg" style="width:100%" onclick="currentDiv(2)" alt="Grappling Towards a Large Enemy">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo3 w3-opacity w3-hover-opacity-off" src="images/project3-3.jpg" style="width:100%" onclick="currentDiv(3)" alt="Grapple Towards - Finishing">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo3 w3-opacity w3-hover-opacity-off" src="images/project3-4.jpg" style="width:100%" onclick="currentDiv(4)" alt="AI Drones Following Up Staircase">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo3 w3-opacity w3-hover-opacity-off" src="images/project3-5.jpg" style="width:100%" onclick="currentDiv(5)" alt="Grappling a Small Enemy">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo3 w3-opacity w3-hover-opacity-off" src="images/project3-6.jpg" style="width:100%" onclick="currentDiv(6)" alt="Jumping Down With Enemy in Grappled State">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo3 w3-opacity w3-hover-opacity-off" src="images/project3-7.jpg" style="width:100%" onclick="currentDiv(7)" alt="Bouncing Grapple off of Wall">
+							</div>
+						</div> <!-- End row -->
+<!--					</div> <!-- End modal content -->
+<!--				</div> <!-- End modal -->
+<!--			</div> <!-- End carousel -->
+			
+<!--			<div class="w3-third w3-padding">
+				<h3><b>Slam N Jam</b> - Summer 2017</h3>
+				<p><b>Co-Programmer</b> - <a href="https://github.com/WizzKid/SlamNJam-Grapple" target="_blank" class="w3-text-pink"> GitHub - Grapple Code</a></p>
+				<p>Extracurricular.</p>
+				<p>First person action melee game based on a grapple hook, made in Unity.</p>
+				<p>This prototype is the result of 4 people working for 2 weeks to reach a functional proof of concept.</p>
+				<button onclick="myFunction('Accordion3')" class="w3-button w3-block-left w3-theme-l4  w3-card-2"><b>
+				Responsibilities</b></button>
+				<div id="Accordion3" class="w3-hide">
+					<p>The grapple hook, which has dual functionality in hooking small enemies to you and yourself to large enemies and defined objects.</p>
+					<p>The hook features physics simulation on the way out and if it hits a non grabbable object, but has linear interpolation based pull for when you do land the hook.</p>
+					<p>Integration with enemy AI programmed by the other programmer (to avoid conflict with engine specific tech).</p>
+					<p>Tying in the run and jump animations to the state machine.</p>
+				</div>
+				<p></p>
+				<button onclick="myFunction('Thoughts3')" class="w3-button w3-block-right w3-theme-l1 w3-card-2"><b>
+				Thoughts</b></button>
+				<div id="Thoughts3" class="w3-hide">
+					<p>In just 3 days, we had a working grapple hook based on the functionality of Roadhog's hook from "Overwatch".</p>
+					<p>In 6 days, we debugged the hook to interact with a fully functional AI controlled drone that can shoot and has animations.</p>
+					<p>At a pace like this, it would be possible to have a polished game within a couple months, however school came up and the team lost interest.</p>
+					<p>If we were to continue development, the next step would be a combo system, a second enemy type, and win/loss states.</p>
+					<p>Constant communication, friendship, and a shared passion really improves the development process.</p>
+				</div>
+				<p></p>
+				<button class="w3-button w3-btheme w3-card-2" type="button" onclick="togglePic('slides3','video3')"><b>Toggle video</b></button>
+				<br></br>
+				<br></br>
+			</div>
+		</div>
+	
+	<!-- Kraken Skulls Project Grid------------------------------------------------------------------------------------->
+<!--		<div class="w3-container w3-ctheme w3-grad-diag1" style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">		
+			<div class="w3-twothird">
+				<div id="slides5" class="s4">
+					<img class="mySlides5 w3-animate-opacity" src="images/project5-1.jpg" alt="Kraken Skulls" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(5);currentDiv(1)"></img>
+					<img class="mySlides5 w3-animate-opacity" src="images/project5-2.jpg" alt="Kraken Skulls" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(5);currentDiv(2)"></img>
+					<img class="mySlides5 w3-animate-opacity" src="images/project5-3.jpg" alt="Kraken Skulls" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(5);currentDiv(3)"></img>
+					<img class="mySlides5 w3-animate-opacity" src="images/project5-4.jpg" alt="Kraken Skulls" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(5);currentDiv(4)"></img>
+					<img class="mySlides5 w3-animate-opacity" src="images/project5-5.jpg" alt="Kraken Skulls" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(5);currentDiv(5)"></img>
+					<img class="mySlides5 w3-animate-opacity" src="images/project5-6.jpg" alt="Kraken Skulls" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(5);currentDiv(6)"></img>
+					<img class="mySlides5 w3-animate-opacity" src="images/project5-7.jpg" alt="Kraken Skulls" style="width:100%;cursor:pointer; max-width:1280px;max-height:720px;" onclick="openModal(5);currentDiv(7)"></img>
+				</div>
+				
+				<!-- <iframe id="video5" style="width:100%; min-height: 526px" class="w3-animate-opacity" src="https://www.youtube.com/embed/tn8Q4_oVGno" frameborder="0" allowfullscreen></iframe> -->
+<!--				<div id="myModal5" class="w3-modal w3-black">
+					<span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal(5)" style="cursor:pointer">×</span>
+					<div class="w3-modal-content">
+
+						<div class="w3-display-container w3-black" style="max-width:1200px">
+							<img class="myModalSlides5" src="images/project5-1.jpg" style="width:100%">
+							<img class="myModalSlides5" src="images/project5-2.jpg" style="width:100%">
+							<img class="myModalSlides5" src="images/project5-3.jpg" style="width:100%">
+							<img class="myModalSlides5" src="images/project5-4.jpg" style="width:100%">
+							<img class="myModalSlides5" src="images/project5-5.jpg" style="width:100%">
+							<img class="myModalSlides5" src="images/project5-6.jpg" style="width:100%">
+							<img class="myModalSlides5" src="images/project5-7.jpg" style="width:100%">
+							<button class="w3-button w3-display-left w3-black w3-opacity" onclick="plusDivs(-1)">&#10094;</button>
+							<button class="w3-button w3-display-right w3-black w3-opacity" onclick="plusDivs(1)">&#10095;</button>
+						</div> <!-- End w3-content -->
+<!--						<div class="w3-row w3-black w3-center">
+							<div class="w3-display-container">
+								<p id="caption5"></p>
+							</div>
+							<div class="w3-col s4">
+								<img class="demo5 w3-opacity w3-hover-opacity-off" src="images/project5-1.jpg" style="width:100%" onclick="currentDiv(1)" alt="Splash Art">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo5 w3-opacity w3-hover-opacity-off" src="images/project5-2.jpg" style="width:100%" onclick="currentDiv(2)" alt="Player Selection">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo5 w3-opacity w3-hover-opacity-off" src="images/project5-3.jpg" style="width:100%" onclick="currentDiv(3)" alt="Two Player Level">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo5 w3-opacity w3-hover-opacity-off" src="images/project5-4.jpg" style="width:100%" onclick="currentDiv(4)" alt="Single Player with Burst Power Up">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo5 w3-opacity w3-hover-opacity-off" src="images/project5-5.jpg" style="width:100%" onclick="currentDiv(5)" alt="Kraken and Rapid Fire Power Up">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo5 w3-opacity w3-hover-opacity-off" src="images/project5-6.jpg" style="width:100%" onclick="currentDiv(6)" alt="Kraken Spawning Seagulls and Cannonballs">
+							</div>
+							<div class="w3-col s4">
+								<img class="demo5 w3-opacity w3-hover-opacity-off" src="images/project5-7.jpg" style="width:100%" onclick="currentDiv(7)" alt="Game Over Screen">
+							</div>
+						</div> <!-- End row -->
+<!--					</div> <!-- End modal content -->
+<!--				</div> <!-- End modal -->
+<!--			</div> <!-- End carousel -->
+			
+<!--			<div class="w3-third w3-padding">
+				<h3><b>Kraken Skulls</b> - Fall 2017</h3>
+				<p><b>Tech Lead</b> - <a href ="https://github.com/WizzKid/KrakenSkulls/tree/master" target="_blank" class="w3-text-pink">Github - All Scripts</a></p>
+				<p>Based on Atari's Centipede, battle infinite waves of the Kraken's tentacles and be prepared for a boss fight in a bullet hell co-op experience, made in Unity.</p>
+				<p>Developed at the same time as Awakening in a team of 3 people.</p>
+				<button onclick="myFunction('Accordion5')" class="w3-button w3-block-left w3-theme-l4  w3-card-2"><b>
+				Responsibilities</b></button>
+				<div id="Accordion5" class="w3-hide">
+					<p>All programming, minus the menu buttons and some UI.</p>
+					<p>This includes: player controls, collisions, enemies, power ups, projectiles, boss mechanics, boss animations, game controller, difficulty scaling, arcade input, PC + Xbox input, and many of the sound effects.</p>
+					<p>Implementation of art from other members.</p>
+				</div>
+				<p></p>
+				<button onclick="myFunction('Thoughts5')" class="w3-button w3-block-right w3-theme-l1 w3-card-2"><b>
+				Thoughts</b></button>
+				<div id="Thoughts5" class="w3-hide">
+					<p>The requirements for this project allowed us to be creative with scope and direction, which turned a classic arcade game into a bullet hell shooter with power ups and boss fights.</p>
+					<p>Our team dynamic was one programmer, one artist, one generalist, and all decisions were made collaboratively.</p>
+					<p>Experience with the Cerny method of development rather than the lengthy documentation we usually had was a fun change, though I appreciate both methods.</p>
+				</div>
+				<p></p>
+				<!-- <button class="w3-button w3-btheme w3-card-2" type="button" onclick="togglePic('slides5','video5')"><b>Toggle video</b></button> -->
+<!--				<iframe frameborder="0" src="https://itch.io/embed/199608?bg_color=d1fbff&amp;fg_color=222222&amp;link_color=00c75d&amp;border_color=53bcd1" width="208" height="167"></iframe>
+
+			</div>
+		</div>
+		-->
+	</div>
+	
+<!-- About------------------------------------------------------------------------------------------------------------------------------------------------>
+	<div id="about" class="tab" style="display:none;">
+		<div class="w3-theme-l1">
+			<h3 class="w3-center w3-text-black" style="padding: 0px 0px 4px 0px;">About</h3>
+		</div>
+	  
+		<div>
+			<div class="w3-container w3-grad-diag2 w3-padding-32 w3-card-4">
+				<div id="background" class="w3-container w3-left">
+					<div class="w3-padding w3-left w3-theme-l4"><h4><b>
+						Background</b></h4>
+					</div>
+					<br>
+					<br>
+					<br>
+					<p>I grew up with video-games.</p>
+					<p>It all started when a doctor prescribed an NES to my older brother to train his lazy eye, where I played Mario Bros until I could clear level 1 with the controller upside while physically upside down. It was later that I would learn how to read from Legend of Zelda: Ocarina of Time through the frustration of not knowing where to go.</p>
+					<p>For the most part, I stuck to gamecube and xbox games until Highschool, where I took a class in game design. There I learned how to create mechanics which ignited my passion, seeing peers enjoying and learning from my games like I had as a child.</p>
+					<p>Some of my favorite games are:</p>
+					<ul>
+						<li>Conker's Bad Fur Day</li>
+						<li>Pikmin 2</li>
+						<li>Starcraft Broodwar</li>
+						<li>Bloodborne</li>
+						<li>Overwatch</li>
+						<li>Worms Armageddon</li>
+						<li>Call of Duty: Black Ops</li>
+					</ul>						
+					<hr style="border:0; height:7px" class="w3-theme-l4 "/>
+					<div class="w3-padding w3-left w3-theme"><h4><b>
+						Passion</b></h4>
+					</div>
+				</div>
+				<div id="passion" class="w3-container w3-left">
+					<p>The reason why I love and play video games enough to make it a career is largely because of mechanics and the ways I can use them, developer intended or not. I love to see the ways players interpret the tools developers give them and watch them go in totally different directions.</p>
+					<p>Ultimately, I enjoy creating challenge with multiple ways of navigating through it. There's something to be said about games that are still being played years later, standing the test of time.</p>
+					<hr style="border:0; height:7px" class="w3-theme "/>
+					<div class="w3-padding w3-left w3-btheme"><h4><b>
+						Process</b></h4>
+					</div>
+				</div>
+				<div id="process" class="w3-container w3-left">
+					<p>When it comes to solutions for projects, I consider the design goals, scope, and technology.</p>
+					<p>Next I set sprint goals that are attainable, giving extra consideration for tasks that would require research to implement.</p>
+					<p>For the first goal, I make a proof of concept for the technology/coding solution. This phase is crucial for getting interest in further development.</p>
+					<p>After this its all about open and clear team communication, integration of work, and the iterative process of agile development based on living documentation.</p>
+					<p>To help keep the team and I focused, I like to use version control and task management software like JIRA, Hack N Plan, Github, Slack, and Discord along with the Agile and Scrum methodologies.</p>
+					<hr style="border:0; height:7px" class="w3-btheme "/>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<!-- Contact---------------------------------------------------------------------------------------------------------------------------------------------->
+	
+	<div id="contact" class="tab" style="display:none; margin: 0px 0px 80px 0px;">
+		<div class="w3-btheme">
+			<h3 class="w3-center w3-text-black" style="padding: 0px 0px 4px 0px;">Contact</h3>
+		</div>
+			<div class="w3-container w3-bar-block w3-center w3-padding-24 w3-grad-diag2">
+				<div class="w3-third">
+					<h3>Hello!</h3>
+					<p>If you have questions about specific work I've done, would like to collaborate on a game, or want to discuss a job opportunity, please feel free to contact me.</p>
+				</div>
+				<div class="w3-container w3-third">
+					<!--<p><i class="fa fa-envelope w3-jumbo w3-text-light-grey"></i><br></br></p>-->
+					<a href="mailto:skbaeringer@protonmail.com?Subject=Portfolio%20Contact" class="w3-center" target="_top"><img src="images/Email_Img.png" style="position:relative; top:17px; width:59%; height:auto;"</img></a>
+				</div>
+				<div class="w3-container w3-third w3-padding-xxlarge">
+					<h3 style="margin: 15px 0px 10px 0px;">Linked In</h3>
+					<a href="https://www.linkedin.com/in/steven-baeringer-b1549473/" class="w3-button w3-blue w3-center" target="_blank"><i class="fa fa-linkedin w3-xxlarge"></i></a>
+				</div>
+			</div>
+		<div class="w3-ctheme">
+			<a href="pdf/Resume_Technical_Designer.pdf" target="_blank" class="w3-button w3-btheme w3-bar w3-padding-24 w3-block w3-card-4" style="margin: 12px 0px 0px 0px">
+				<i class="fa fa-share w3-xxlarge w3-animate-left"></i><h4 class="w3-animate-bottom">Open Resume</h4>
+			</a>
+			<!--
+			<button onclick="myFunction('Development1')" class="w3-button w3-block w3-btheme w3-card-4 w3-padding-32 w3-animate-left w3-margin-top"><i class="fa fa-check-square w3-xlarge"></i><h4><b>
+			Skills</b></h4></button> 
+			<div id="Development1" class="w3-hide w3-container w3-grey">
+				<div class="w3-container w3-half w3-padding-large">
+					<h4><b>Development Skills</b> - top 6</h4>
+					<p>Programming/Scripting - C# C++ Java JS</p>
+					<div class="w3-white">
+					  <div class="w3-container w3-green w3-padding w3-center" style="width:95%">95%</div>
+					</div>
+					<p>Particle effects</p>
+					<div class="w3-white">
+					  <div class="w3-container w3-green w3-padding w3-center" style="width:90%">90%</div>
+					</div>
+					<p>Level Design</p>
+					<div class="w3-white">
+					  <div class="w3-container w3-green w3-padding w3-center" style="width:85%">85%</div>
+					</div>
+					<p>
+					<p>Producing</p>
+					<div class="w3-white">
+					  <div class="w3-container w3-green w3-padding w3-center" style="width:80%">80%</div>
+					</div>
+					<p>
+					<p>Texturing</p>
+					<div class="w3-white">
+					  <div class="w3-container w3-green w3-padding w3-center" style="width:80%">80%</div>
+					</div>
+					<p>
+					<p>3D Modeling</p>
+					<div class="w3-white">
+					  <div class="w3-container w3-green w3-padding w3-center" style="width:80%">80%</div>
+					</div>
+					<p>
+					</p>
+				</div>
+				<div class="w3-container w3-half w3-padding-large">
+					<h4><b>Software Familiarity</b> - top 6</h4>
+					<p>Unity</p>
+					<div class="w3-white">
+					  <div class="w3-container w3-green w3-padding w3-center" style="width:90%">90%</div>
+					</div>
+					<p>Maya - 3D modelling</p>
+					<div class="w3-white">
+					  <div class="w3-container w3-green w3-padding w3-center" style="width:75%">75%</div>
+					</div>
+					<p>Substance Painter</p>
+					<div class="w3-white">
+					  <div class="w3-container w3-green w3-padding w3-center" style="width:75%">75%</div>
+					</div>
+					<p>Photoshop</p>
+					<div class="w3-white">
+					  <div class="w3-container w3-green w3-padding w3-center" style="width:75%">75%</div>
+					</div>
+					<p>Git Hub</p>
+					<div class="w3-white">
+					  <div class="w3-container w3-green w3-padding w3-center" style="width:75%">75%</div>
+					</div>
+					<p>Hack N Plan</p>
+					<div class="w3-white">
+					  <div class="w3-container w3-green w3-padding w3-center" style="width:100%">100%</div>
+					</div>
+					</p>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+  <!-- Footer -->
+  <footer class="w3-span w3-bar w3-black" style="margin: 40px 0px 0px 0px;max-width:2000px;">
+  <div class="w3-row-padding">
+  
+  <div class="w3-panel w3-xlarge">
+	<!-- <a href="https://www.linkedin.com/in/steven-baeringer-b1549473/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a> -->
+    <!--<i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+	<i class="fa fa-reddit w3-hover-opacity"></i>-->
+  </div>
+  
+  <br></br>
+  <br></br>
+  <br></br>
+  </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+function togglePic(pic,vid) {
+	if(document.getElementById(pic).style.display == "block") {
+		document.getElementById(pic).style.display = "none";
+		document.getElementById(vid).style.display = "block";
+	} else {
+		document.getElementById(pic).style.display = "block";
+		document.getElementById(vid).style.display = "none";
+	}
+}
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides1");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 3000); // changes every 3 seconds
+}
+
+//var slideIndex2 = 0;
+//carousel2();
+
+/*
+function carousel2() {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex2++;
+    if (slideIndex2 > x.length) {slideIndex2 = 1} 
+    x[slideIndex2-1].style.display = "block"; 
+    setTimeout(carousel2, 3000); // changes every 3 seconds
+}
+*/
+
+//var slideIndex3 = 0;
+//carousel3();
+
+/*
+function carousel3() {
+    var i;
+    var x = document.getElementsByClassName("mySlides3");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex3++;
+    if (slideIndex3 > x.length) {slideIndex3 = 1} 
+    x[slideIndex3-1].style.display = "block"; 
+    setTimeout(carousel3, 3000); // changes every 3 seconds
+}
+*/
+
+var slideIndex4 = 0;
+carousel4();
+
+function carousel4() {
+    var i;
+    var x = document.getElementsByClassName("mySlides4");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex4++;
+    if (slideIndex4 > x.length) {slideIndex4 = 1} 
+    x[slideIndex4-1].style.display = "block"; 
+    setTimeout(carousel4, 3000); // changes every 3 seconds
+}
+
+//var slideIndex5 = 0;
+//carousel5();
+
+/*
+function carousel5() {
+    var i;
+    var x = document.getElementsByClassName("mySlides5");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex5++;
+    if (slideIndex5 > x.length) {slideIndex5 = 1} 
+    x[slideIndex5-1].style.display = "block"; 
+    setTimeout(carousel5, 3000); // changes every 3 seconds
+}
+*/
+
+document.getElementById("slides1").style.display="block";
+document.getElementById("video1").style.display="none";
+//document.getElementById("slides2").style.display="block";
+//document.getElementById("video2").style.display="none";
+//document.getElementById("slides3").style.display="block";
+//document.getElementById("video3").style.display="none";
+document.getElementById("slides4").style.display="block";
+document.getElementById("video4").style.display="none";
+//document.getElementById("slides5").style.display="block";
+//document.getElementById("video5").style.display="none";
+document.getElementById("warrior").style.display="none";
+
+function openTab(tabName) {
+    var i;
+    var x = document.getElementsByClassName("tab");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    document.getElementById(tabName).style.display = "block"; 
+}
+
+// Lightbox code -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+var currentModal = 1;
+function openModal(n) {
+  document.getElementById('myModal' + n).style.display = "block";
+  currentModal = n;
+}
+
+function closeModal(n) {
+  document.getElementById('myModal' + n).style.display = "none";
+}
+
+var slideIndexLB = 1;
+showDivs(slideIndexLB);
+
+function plusDivs(n) {
+  showDivs(slideIndexLB += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndexLB = n);
+}
+
+function showDivs(numImgs) {
+  var i;
+  var x = document.getElementsByClassName("myModalSlides" + currentModal);
+  var dots = document.getElementsByClassName("demo" + currentModal);
+  var captionText = document.getElementById("caption" + currentModal);
+  if (numImgs > x.length) {slideIndexLB = 1}
+  if (numImgs < 1) {slideIndexLB = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+
+  }
+  x[slideIndexLB-1].style.display = "block";
+  dots[slideIndexLB-1].className += " w3-opacity-off";
+  captionText.innerHTML = dots[slideIndexLB-1].alt;
+}
+
+function showhide(n) {
+if(document.getElementById(n).style.display == "block") {
+		document.getElementById(n).style.display = "none";
+	} else {
+		document.getElementById(pic).style.display = "block";
+	}
+}
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+</script>
+</body>
+</html>
